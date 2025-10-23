@@ -2,12 +2,34 @@ package empresa;
 
 public class Assalariado extends Funcionario {
 
-    public Assalariado (String nome, int idade, float cpf, float cep, String endereço, int NumeroDaContaBancaria, double Salario ){
-        super(nome, idade, cpf,  cep,  endereço,  NumeroDaContaBancaria,  Salario);
+    
+
+    public Assalariado (String nome, int idade, float cpf, int desempenho, String endereço, int NumeroDaContaBancaria, double salario ){
+        super(nome, idade, cpf,  desempenho,  endereço,  NumeroDaContaBancaria,  salario);
 
     }
     @Override
-    public void pagamento(double valor){
+    public void pagamento(double valor){//valor = bonus decido pelo empresa, que so e aplicado de acordo com desempenho do funcionario na empresa
+
+        if(this.desempenho >= 8){
+            this.salario = 1518 + valor;
+            System.out.println("Funcionario teve Bom desempenho\n" +  " Salario: R$ "  + this.salario);
+            
+
+        }else if(this.desempenho <=7 && this.desempenho >= 1){
+            this.salario = 1518;
+            System.out.println("Salario: R$ " + this.salario);
+
+            
+
+
+        }
+        
+        else if (this.desempenho == null ){
+            System.out.println("Desempenho nao informado");
+        }
+        
+
 
 
 

@@ -3,9 +3,9 @@ package empresa;
 
 public class Horista extends Funcionario{
 
-    public Horista (String nome, int idade, float cpf, float cep, String endereço, int NumeroDaContaBancaria, double Salario ){
+    public Horista (String nome, int idade, float cpf, int desempenho, String endereço, int NumeroDaContaBancaria, double salario ){
         
-        super(nome, idade, cpf,  cep,  endereço,  NumeroDaContaBancaria,  Salario);
+        super(nome, idade, cpf,  desempenho,  endereço,  NumeroDaContaBancaria,  salario);
 
 
     }
@@ -14,20 +14,23 @@ public class Horista extends Funcionario{
     public void pagamento(double valor){
         if(valor >= 160){
 
-            valor = valor * 20;// 20 horas de trabalhos
+            this.salario = valor * 20;// 20 horas de trabalhos
 
-           System.out.println("R$ " + valor);
-
+        
             valor = valor * 0.10;// bonus
+            System.out.println("BONUS DE R$ " + valor);
 
-            System.out.println("R$ " + valor);
+            this.salario += (int) valor;
 
-            this.Salario = (int) valor;
+            System.out.println("SAlario total R$ " + this.salario);
+
+            
             
 
-        }else if(valor < 160 && valor >= 1){
+        }else if(valor < 160 && valor != 0 ){
             valor = valor * 20;
-             System.out.println(valor);
+            System.out.println("Horas minima para Bonus não completadas");
+             System.out.println("Salario: R$ " + valor);
 
 
         }

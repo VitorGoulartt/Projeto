@@ -2,24 +2,38 @@ package empresa;
 
 public class Comissionado extends Funcionario {
 
-    private double taxa;
+    protected double taxa = 0.08; // %8
 
-    public Comissionado (String nome, int idade, float cpf, float cep, String endereço, int NumeroDaContaBancaria, double Salario ){
-        super(nome, idade, cpf,  cep,  endereço,  NumeroDaContaBancaria,  Salario);
+    public Comissionado (String nome, int idade, float cpf, int desempenho, String endereço, int NumeroDaContaBancaria, double salario ){
+        super(nome, idade, cpf,  desempenho,  endereço,  NumeroDaContaBancaria,  salario);
 
 
     }
-
+   
+    
+    @Override
     public void pagamento(double valor){
-        if(valor >= 1){
-            this.taxa = valor/ 8;// recebe com base no total de vendas realizadas e na
-                                 //taxa de comissão estabelecida que e 8.
-            valor = valor * 8;
+        if(valor >= 20000){ // se valor for igual ou maior que a meta de vendas
+            System.out.println("Atingido a meta de vendas");
+            valor = valor * this.taxa;// valor = Quanto vendas teve / taxa = A porcetagem da que vai receber que e 8%
+            this.salario = valor ;// somando o valor da taxa de comissao no salario minimo
 
-            System.out.println(valor);
+            System.out.println(valor );
+            System.out.println(this.salario);
 
 
-        }else if()
+        }else{
+
+             System.out.println("A meta de vendas nao atingida");
+            valor = valor * this.taxa;// valor = Quanto vendas teve / taxa = A porcetagem da que vai receber que e 8%
+            this.salario = valor ;// somando o valor da taxa de comissao no salario minimo
+
+            System.out.println(valor );
+            System.out.println(this.salario);
+
+
+
+        }
         
 
     }

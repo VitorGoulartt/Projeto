@@ -5,24 +5,30 @@ public abstract class Funcionario implements pagamento  {
     protected String nome;
     protected int idade;
     protected float cpf;
-    protected float cep;
+    protected Integer desempenho;
     protected String endereço;
     protected int NumeroDaContaBancaria;
-    protected double Salario;
+    protected double salario;
 
-    public Funcionario(String nome, int idade, float cpf, float cep, String endereço, int NumeroDaContaBancaria, double Salario){
+    public Funcionario(String nome, int idade, float cpf, int desempenho, String endereço, int NumeroDaContaBancaria, double salario){
+        //contrutor para definir os valores do funcionario
 
         this.nome = nome;
         this.idade = idade;
         this.cpf = cpf;
-        this.cep = cep;
+        this.desempenho = desempenho;
         this.endereço = endereço;
         this.NumeroDaContaBancaria = NumeroDaContaBancaria;
-        this.Salario = Salario;
+        this.salario = salario;
 
     }
+    
 
     public abstract void pagamento(double valor);
+
+    public double getsalario(){
+        return this.salario;
+    }
 
     //public abstract void 
 
