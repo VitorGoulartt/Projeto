@@ -8,9 +8,9 @@ public abstract class Funcionario implements pagamento  {
     protected float cep;
     protected String endereço;
     protected int NumeroDaContaBancaria;
-    protected int Salario;
+    protected double Salario;
 
-    public Funcionario(String nome, int idade, float cpf, float cep, String endereço, int NumeroDaContaBancaria, int Salario){
+    public Funcionario(String nome, int idade, float cpf, float cep, String endereço, int NumeroDaContaBancaria, double Salario){
 
         this.nome = nome;
         this.idade = idade;
@@ -22,7 +22,7 @@ public abstract class Funcionario implements pagamento  {
 
     }
 
-    public abstract void pagamento();
+    public abstract void pagamento(double valor);
 
     //public abstract void 
 

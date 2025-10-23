@@ -1,36 +1,27 @@
 package empresa;
 
+public class Comissionado extends Funcionario {
 
-public class Comissionado extends Funcionario{
+    private double taxa;
 
-    public Comissionado (String nome, int idade, float cpf, float cep, String endereço, int NumeroDaContaBancaria, int Salario ){
-        
+    public Comissionado (String nome, int idade, float cpf, float cep, String endereço, int NumeroDaContaBancaria, double Salario ){
         super(nome, idade, cpf,  cep,  endereço,  NumeroDaContaBancaria,  Salario);
 
 
     }
 
-    @Override
-    public void comissionado(double horas){
-        if(horas > 160){
+    public void pagamento(double valor){
+        if(valor >= 1){
+            this.taxa = valor/ 8;// recebe com base no total de vendas realizadas e na
+                                 //taxa de comissão estabelecida que e 8.
+            valor = valor * 8;
 
-            horas = horas * 20;// 20 horas de trabalhos
-
-            horas = horas * 0.10;// bonus
-
-            System.out.println(horas);
-
-        }else if(horas <= 160 && horas >= 1){
-            horas = horas * 20;
-             System.out.println(horas);
+            System.out.println(valor);
 
 
-        }
-         
-
+        }else if()
+        
 
     }
-
-
 
 }

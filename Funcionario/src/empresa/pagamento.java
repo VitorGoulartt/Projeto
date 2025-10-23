@@ -2,7 +2,9 @@ package empresa;
 
 public interface pagamento {
 
-    void comissionado(double horas);
+    void pagamento(double valor);
+
+    
     
    
 } 
