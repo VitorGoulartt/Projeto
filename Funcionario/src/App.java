@@ -1,4 +1,5 @@
 import empresa.Horista;
+import empresa.Assalariado;
 import empresa.Comissionado;
 import empresa.Funcionario;
 
@@ -9,6 +10,9 @@ public class App {
 
          Funcionario comissao = new Comissionado("nome", 17, 0563626, 7, "Rua 09 casa 10", 0232400002, 1518 );
         comissao.pagamento(20000);
+
+        Funcionario assalario = new Assalariado(null, 0, 0, 0, null, 0, 0);
+        assalario.pagamento(500);
         
 
         
