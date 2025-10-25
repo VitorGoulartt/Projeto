@@ -9,6 +9,7 @@ public abstract class Funcionario implements pagamento  {
     protected String endereço;
     protected int NumeroDaContaBancaria;
     protected double salario;
+    protected double valor;
 
     public Funcionario(String nome, int idade, float cpf, int desempenho, String endereço, int NumeroDaContaBancaria, double salario){
         //contrutor para definir os valores do funcionario
@@ -22,9 +23,16 @@ public abstract class Funcionario implements pagamento  {
         this.salario = salario;
 
     }
+
+    public void pagamentoum(double valor){
+        
+
+    }
+    
+    
     
 
-    public abstract void pagamento(double valor);
+    
 
     public double getsalario(){
         return this.salario;

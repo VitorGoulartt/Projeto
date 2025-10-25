@@ -11,7 +11,7 @@ public class Horista extends Funcionario{
     }
 
     @Override
-    public void pagamento(double valor){
+    public void pagamentoum(double valor){
         if(valor >= 160){
 
             this.salario = valor * 20;// 20 horas de trabalhos

@@ -1,6 +1,8 @@
 package empresa;
 
-public class Assalariado extends Funcionario {
+public class Assalariado extends Funcionario  {
+
+    
 
     
 
@@ -8,8 +10,9 @@ public class Assalariado extends Funcionario {
         super(nome, idade, cpf,  desempenho,  endereço,  NumeroDaContaBancaria,  salario);
 
     }
+    
     @Override
-    public void pagamento(double valor){//valor = bonus decido pelo empresa, que so e aplicado de acordo com desempenho do funcionario na empresa
+    public void pagamentoum(double valor){//valor = bonus decido pelo empresa, que so e aplicado de acordo com desempenho do funcionario na empresa
 
         if(this.desempenho >= 8){
             this.salario = 1518 + valor;
@@ -25,7 +28,7 @@ public class Assalariado extends Funcionario {
 
         }
         
-        else if (this.desempenho == null ){
+        else if (this.desempenho == null || this.desempenho == 0 ){
             System.out.println("Desempenho nao informado");
         }
         
