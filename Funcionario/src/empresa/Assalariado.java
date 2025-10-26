@@ -6,8 +6,8 @@ public class Assalariado extends Funcionario  {
 
     
 
-    public Assalariado (String nome, int idade, float cpf, int desempenho, String endereço, int NumeroDaContaBancaria, double salario ){
-        super(nome, idade, cpf,  desempenho,  endereço,  NumeroDaContaBancaria,  salario);
+    public Assalariado (String nome, int idade, float cpf, int desempenho, String endereço, int ID, double salario ){
+        super(nome, idade, cpf,  desempenho,  endereço,  ID,  salario);
 
     }
     

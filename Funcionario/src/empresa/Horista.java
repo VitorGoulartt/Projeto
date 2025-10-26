@@ -3,9 +3,9 @@ package empresa;
 
 public class Horista extends Funcionario{
 
-    public Horista (String nome, int idade, float cpf, int desempenho, String endereço, int NumeroDaContaBancaria, double salario ){
+    public Horista (String nome, int idade, float cpf, int desempenho, String endereço, int ID, double salario ){
         
-        super(nome, idade, cpf,  desempenho,  endereço,  NumeroDaContaBancaria,  salario);
+        super(nome, idade, cpf,  desempenho,  endereço,  ID,  salario);
 
 
     }

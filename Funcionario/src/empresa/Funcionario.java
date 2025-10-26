@@ -7,11 +7,11 @@ public abstract class Funcionario implements pagamento  {
     protected float cpf;
     protected Integer desempenho;
     protected String endereço;
-    protected int NumeroDaContaBancaria;
+    protected int ID;
     protected double salario;
     protected double valor;
 
-    public Funcionario(String nome, int idade, float cpf, int desempenho, String endereço, int NumeroDaContaBancaria, double salario){
+    public Funcionario(String nome, int idade, float cpf, int desempenho, String endereço, int ID, double salario){
         //contrutor para definir os valores do funcionario
 
         this.nome = nome;
@@ -19,7 +19,7 @@ public abstract class Funcionario implements pagamento  {
         this.cpf = cpf;
         this.desempenho = desempenho;
         this.endereço = endereço;
-        this.NumeroDaContaBancaria = NumeroDaContaBancaria;
+        this.ID = ID;
         this.salario = salario;
 
     }

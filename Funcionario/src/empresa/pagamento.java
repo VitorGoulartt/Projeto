@@ -5,6 +5,8 @@ public interface pagamento {
     void pagamentoum(double valor);
 
     
+
+    
     
    
 } 

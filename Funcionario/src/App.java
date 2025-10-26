@@ -6,6 +6,8 @@ import empresa.Funcionario;
 
 public class App {
     public static void main(String[] args) {
+
+        
         Funcionario horis = new Horista("nome", 17, 0563626, 10, "Rua 09 casa 10", 0232400002, 0);
         horis.pagamentoum(120.0);  
         
