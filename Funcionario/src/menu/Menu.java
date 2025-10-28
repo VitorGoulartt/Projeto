@@ -1,32 +1,37 @@
 package menu;
 import java.util.Scanner;
-import empresa.Comissionado;
-import empresa.Funcionario;
-import empresa.Horista;
+import empresa.*;
+
+
 
 
 
 
 public class Menu {
+    private int escolha;
+
+    public int getescolha(){
+        return escolha;
+
+    }
+   
     Scanner sc = new Scanner(System.in);
     Scanner sc2 = new Scanner(System.in);
     Scanner sc3 = new Scanner(System.in);
     Scanner sc4 = new Scanner(System.in);
 
     Funcionario comi = new Comissionado(null, 0, 0, 9, null, null, 0);
-    Funcionario hori = new Horista()
+    Funcionario hori = new Horista(null, 0, 0, 9, null, null, 0);
+    Funcionario assa = new Assalariado(null, 0, 0, 9, null, null, 0);
 
      GeradorDeId idFuncionario = new GeradorDeId();
 
 
+     
+    
     public void exibir(){
-        System.out.println("-----EMPRESA-----");
-        System.out.println("1. Cadastrar novo Funcionario");
-        System.out.println("2. Exibir informaçoes do Funcionario");
-        System.out.println("3. Pagamento do mes");
-        System.out.println("4. Sair");
-        System.out.println("---------------");
-        int escolha = sc.nextInt();
+        
+        escolha = sc.nextInt();
 
 
          switch(escolha){
@@ -39,59 +44,80 @@ public class Menu {
             System.out.println("2. Comissionado ");
             System.out.println("3. Assalariado ");
             escolha = sc.nextInt();
+
             if(escolha == 1){
+                System.out.println("---Funcinario horista---");
             System.out.println("Nome do Funcionario: ");
-            fun.setnome(sc2.nextLine());
+            hori.setnome(sc2.nextLine());
             System.out.println("Idade do Funcionario: ");
-            fun.setidade(sc3.nextInt());
+            hori.setidade(sc3.nextInt());
             System.out.println("CPF do Funcionario: ");
-            fun.setcpf(sc4.nextFloat());
+            hori.setcpf(sc4.nextFloat());
             System.out.println("Endereço do Funcionario: ");
-            fun.setendereço(sc2.nextLine());
+            hori.setendereço(sc2.nextLine());
             System.out.println("Salario do Funcionario: ");
-            fun.setsalario(sc3.nextDouble());
-           fun.setID(GeradorDeId.gerarIdFuncionario(fun.getnome()));
+            hori.setsalario(sc3.nextDouble());
+           hori.setID(GeradorDeId.gerarIdFuncionario(hori.getnome()));
             
-            System.out.println("ID do funcionario " + fun.getID());
+            System.out.println("ID do funcionario " + hori.getID());
+            escolha = 0;
 
             }else if(escolha == 2){
+                System.out.println("---Funcinario Comissionado---");
             System.out.println("Nome do Funcionario: ");
-            fun.setnome(sc4.nextLine());
+            comi.setnome(sc4.nextLine());
             System.out.println("Idade do Funcionario: ");
-            fun.setidade(sc2.nextInt());
+            comi.setidade(sc2.nextInt());
             System.out.println("CPF do Funcionario: ");
-            fun.setcpf(sc3.nextFloat());
+            comi.setcpf(sc3.nextFloat());
             System.out.println("Endereço do Funcionario: ");
-            fun.setendereço(sc4.nextLine());
+            comi.setendereço(sc4.nextLine());
             System.out.println("Salario do Funcionario: ");
-            fun.setsalario(sc2.nextDouble());
-            fun.setID(GeradorDeId.gerarIdFuncionario(fun.getnome()));
+            comi.setsalario(sc2.nextDouble());
+            comi.setID(GeradorDeId.gerarIdFuncionario(comi.getnome()));
             
-            System.out.println("ID do funcionario " + fun.getID());
+            System.out.println("ID do funcionario " + comi.getID());
+            escolha = 0;
 
             }else if(escolha == 3){
-            System.out.println("---Funcionario comissionado---");
+            System.out.println("---Funcionario Assalariado---");
             System.out.println("Nome do Funcionario: ");
-            fun.setnome(sc3.nextLine());
+            assa.setnome(sc3.nextLine());
             System.out.println("Idade do Funcionario: ");
-            fun.setidade(sc4.nextInt());
+            assa.setidade(sc4.nextInt());
             System.out.println("CPF do Funcionario: ");
-            fun.setcpf(sc2.nextFloat());
+            assa.setcpf(sc2.nextFloat());
             System.out.println("Endereço do Funcionario: ");
-            fun.setendereço(sc3.nextLine());
-            fun.setID(GeradorDeId.gerarIdFuncionario(fun.getnome()));
+            assa.setendereço(sc3.nextLine());
+            assa.setID(GeradorDeId.gerarIdFuncionario(assa.getnome()));
             
-            System.out.println("ID do funcionario " + fun.getID());
+            System.out.println("ID do funcionario " + assa.getID());
+            escolha = 0;
             
 
             }else{
                 System.out.println("Erro OPÇAO INVALIDA");
+                escolha = 0;
             }
+            break;
 
-            sc.close();
-            sc2.close();
-            sc3.close();
-            sc4.close();
+            case 02:
+             System.out.println("Tipo de Funcionario");
+            System.out.println("1. Horista ");
+            System.out.println("2. Comissionado ");
+            System.out.println("3. Assalariado ");
+            escolha = sc.nextInt();
+
+            switch(escolha){
+                case 01:
+                System.out.println(hori.getnome());
+            }
+            break;
+
+
+            
+
+           
 
            
 
@@ -101,6 +127,7 @@ public class Menu {
 
 
          }
+          
 
 
         
