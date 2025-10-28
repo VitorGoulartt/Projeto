@@ -6,7 +6,7 @@ public class Comissionado extends Funcionario{
 
     protected double taxa = 0.08; // %8
 
-    public Comissionado (String nome, int idade, float cpf, int desempenho, String endereço, int ID, double salario ){
+    public Comissionado (String nome, int idade, float cpf, int desempenho, String endereço, String ID, double salario ){
         super(nome, idade, cpf,  desempenho,  endereço,  ID,  salario);
 
 

@@ -6,7 +6,7 @@ public class Assalariado extends Funcionario  {
 
     
 
-    public Assalariado (String nome, int idade, float cpf, int desempenho, String endereço, int ID, double salario ){
+    public Assalariado (String nome, int idade, float cpf, int desempenho, String endereço, String ID, double salario ){
         super(nome, idade, cpf,  desempenho,  endereço,  ID,  salario);
 
     }
@@ -15,7 +15,7 @@ public class Assalariado extends Funcionario  {
     public void pagamentoum(double valor){//valor = bonus decido pelo empresa, que so e aplicado de acordo com desempenho do funcionario na empresa
 
         if(this.desempenho >= 8){
-            this.salario = 1518 + valor;
+            this.salario =+ valor;
             System.out.println("Funcionario teve Bom desempenho\n" +  " Salario: R$ "  + this.salario);
             
 

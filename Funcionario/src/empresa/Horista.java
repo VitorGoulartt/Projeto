@@ -3,18 +3,18 @@ package empresa;
 
 public class Horista extends Funcionario{
 
-    public Horista (String nome, int idade, float cpf, int desempenho, String endereço, int ID, double salario ){
+    public Horista (String nome, int idade, float cpf, int desempenho, String endereço, String ID, double salario ){
         
         super(nome, idade, cpf,  desempenho,  endereço,  ID,  salario);
 
 
-    }
+    }  
 
     @Override
     public void pagamentoum(double valor){
         if(valor >= 160){
 
-            this.salario = valor * 20;// 20 horas de trabalhos
+            this.salario = valor * 20;// 20 $R por  horas de trabalhos
 
         
             valor = valor * 0.10;// bonus
